@@ -285,47 +285,6 @@ top10_topic_list <- labelTopics(topics10)
 print(top10_topic_list)
 ```
 
-**Option 2 - Test 4 Topics:**
-```{r}
-topics4 <- stm(documents = fashionPrep$documents, 
-             vocab = fashionPrep$vocab, seed = 1001,
-             K = 4, verbose = FALSE)
-```
-
-Topic proportions plot at 4 topics:
-```{r}
-plot(topics4)
-```
-
-See what emerges from each topic by evaluating high prob & FREX words
-```{r}
-top4_topic_list <- labelTopics(topics4)
-
-print(top4_topic_list)
-```
-
-
-
-**Option 2 - Test 5 Topics:**
-```{r}
-topics5 <- stm(documents = fashionPrep$documents, 
-             vocab = fashionPrep$vocab, seed = 1001,
-             K = 5, verbose = FALSE)
-```
-
-Topic proportions plot at 5 topics:
-```{r}
-plot(topics5)
-```
-
-See what emerges from each topic by evaluating high prob & FREX words
-```{r}
-top5_topic_list <- labelTopics(topics5)
-
-print(top5_topic_list)
-```
-
-
 When comparing both topic models results to one another, there are clear similarities. It seems that in 2023, consumers can anticipate to see popularity of a variation of skirts and dresses, all utilizing many different fabrics. Specifically, we will see fashion retailers producing many crochet/ fringe looks, using sheer design elements, silk and leather fabrics, and the resurgence of denim and jean. 
 
 Thank you for your interest in my analysis of the most relevant 2023 anticipated Fashion trends.
