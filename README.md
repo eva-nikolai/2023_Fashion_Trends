@@ -5,9 +5,9 @@
 Fashion is an ever-evolving industry, constantly generating excitement and anticipation for the next big trends. This project leverages Natural Language Processing (NLP) techniques to identify the most anticipated fashion trends for 2023. The outcomes can provide guidance to production decisions and empower consumers, enabling them to inform their purchasing choices with the projected trends for the year.
 
 Objectives:
-•	Determine the predominant fashion trend predictions for 2023
-•	Scrape data from 10 articles sourced from prominent fashion websites
-•	Employ text cleaning, topic modeling, and term frequency analysis to derive insights
+* Determine the predominant fashion trend predictions for 2023
+* Scrape data from 10 articles sourced from prominent fashion websites
+* Employ text cleaning, topic modeling, and term frequency analysis to derive insights
 
 **Methodology**
 
@@ -29,8 +29,8 @@ The second NLP analysis we conduct is topic models. We first perform a KTest to 
 
 When combining the results of Natural Language Processing methods, we find that in 2023, consumers can anticipate seeing:
 
-•	Variations of skirt and dress lengths
-•	Sheer/ cutout design elements
-•	Silk, leather, cotton
-•	Crochet/ fringe looks
-•	Resurgence of denim and jean
+* Variations of skirt and dress lengths
+* Sheer/ cutout design elements
+* Silk, leather, cotton
+* Crochet/ fringe looks
+* Resurgence of denim and jean
