@@ -245,27 +245,7 @@ kTest <- searchK(documents = fashionPrep$documents,
 plot(kTest)
 ```
 
-After viewing the results of the kTest, the results are fairly interesting. Specifically, it is interesting to see the semantic coherence be so high with 20 topics. As the ideal topic selection would be the number of topics with highest semantic coherence and lowest residuals, we see the model suggests to select 10 topics. However, for some variation, I also tested using the next best result: 3. 
-
-**Option 1 - Test 10 Topics:**
-```{r}
-topics10 <- stm(documents = fashionPrep$documents, 
-             vocab = fashionPrep$vocab, seed = 1001,
-             K = 10, verbose = FALSE)
-```
-
-Topic proportions plot at 10 topics:
-```{r}
-plot(topics10)
-```
-
-See what emerges from each topic by evaluating high prob & FREX words
-```{r}
-top10_topic_list <- labelTopics(topics10)
-
-print(top10_topic_list)
-```
-
+After viewing the results of the kTest, the results are fairly interesting. Specifically, it is interesting to see the semantic coherence be so high with 20 topics. As the ideal topic selection would be the number of topics with highest semantic coherence and lowest residuals, we see the model suggests to select 20 topics. However, for some variation, I also tested using the next best result - 10. 
 
 **Option 1 - Test 20 Topics:**
 ```{r}
@@ -284,6 +264,25 @@ See what emerges from each topic by evaluating high prob & FREX words
 top20_topic_list <- labelTopics(topics20)
 
 print(top20_topic_list)
+```
+
+**Option 1 - Test 10 Topics:**
+```{r}
+topics10 <- stm(documents = fashionPrep$documents, 
+             vocab = fashionPrep$vocab, seed = 1001,
+             K = 10, verbose = FALSE)
+```
+
+Topic proportions plot at 10 topics:
+```{r}
+plot(topics10)
+```
+
+See what emerges from each topic by evaluating high prob & FREX words
+```{r}
+top10_topic_list <- labelTopics(topics10)
+
+print(top10_topic_list)
 ```
 
 **Option 2 - Test 4 Topics:**

@@ -318,77 +318,8 @@ After viewing the results of the kTest, the results are fairly
 interesting. Specifically, it is interesting to see the semantic
 coherence be so high with 20 topics. As the ideal topic selection would
 be the number of topics with highest semantic coherence and lowest
-residuals, we see the model suggests to select 10 topics. However, for
-some variation, I also tested using the next best result: 3.
-
-**Option 1 - Test 10 Topics:**
-
-    topics10 <- stm(documents = fashionPrep$documents, 
-                 vocab = fashionPrep$vocab, seed = 1001,
-                 K = 10, verbose = FALSE)
-
-Topic proportions plot at 10 topics:
-
-    plot(topics10)
-
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-19-1.png)
-
-See what emerges from each topic by evaluating high prob & FREX words
-
-    top10_topic_list <- labelTopics(topics10)
-
-    print(top10_topic_list)
-
-    ## Topic 1 Top Words:
-    ##       Highest Prob: sheer, lace, pump, blue, y2k, prada, oversized 
-    ##       FREX: sheer, lace, pump, blue, y2k, prada, oversized 
-    ##       Lift: blue, lace, pump, sheer, y2k, prada, oversized 
-    ##       Score: sheer, blue, pump, y2k, lace, prada, oversized 
-    ## Topic 2 Top Words:
-    ##       Highest Prob: blaze, woolblend, cropped, flare, saint, oversized, pant 
-    ##       FREX: blaze, woolblend, cropped, flare, saint, oversized, jean 
-    ##       Lift: blaze, cropped, flare, saint, woolblend, oversized, pant 
-    ##       Score: blaze, woolblend, cropped, flare, saint, oversized, pant 
-    ## Topic 3 Top Words:
-    ##       Highest Prob: skirt, bottega, veneta, silk, mini, cutout, maxi 
-    ##       FREX: bottega, veneta, silk, skirt, mini, cutout, maxi 
-    ##       Lift: silk, bottega, veneta, mini, cutout, skirt, maxi 
-    ##       Score: skirt, veneta, bottega, mini, cutout, silk, maxi 
-    ## Topic 4 Top Words:
-    ##       Highest Prob: top, earring, ballet, satin, suit, will, color 
-    ##       FREX: earring, ballet, satin, suit, top, will, skirt 
-    ##       Lift: ballet, earring, satin, suit, will, top, color 
-    ##       Score: top, earring, will, suit, satin, ballet, color 
-    ## Topic 5 Top Words:
-    ##       Highest Prob: getty, image, photo, cotton, crochet, dry, noten 
-    ##       FREX: getty, image, photo, cotton, crochet, dry, noten 
-    ##       Lift: cotton, crochet, dry, getty, image, noten, photo 
-    ##       Score: getty, image, photo, dry, noten, van, cotton 
-    ## Topic 6 Top Words:
-    ##       Highest Prob: dress, denim, rise, tail, cutout, maxi, midi 
-    ##       FREX: dress, denim, rise, tail, cutout, maxi, skirt 
-    ##       Lift: denim, dress, rise, tail, cutout, maxi, mini 
-    ##       Score: dress, denim, rise, tail, cutout, maxi, midi 
-    ## Topic 7 Top Words:
-    ##       Highest Prob: leather, jacket, tailor, check, pink, wool, tory 
-    ##       FREX: leather, jacket, tailor, check, pink, wool, tory 
-    ##       Lift: check, jacket, leather, pink, tailor, wool, tory 
-    ##       Score: jacket, leather, tailor, wool, check, pink, tory 
-    ## Topic 8 Top Words:
-    ##       Highest Prob: shirt, jean, bag, pant, proenza, schouler, mule 
-    ##       FREX: bag, shirt, proenza, schouler, pant, jean, mule 
-    ##       Lift: mule, proenza, schouler, bag, pant, shirt, jean 
-    ##       Score: jean, shirt, pant, proenza, schouler, bag, mule 
-    ## Topic 9 Top Words:
-    ##       Highest Prob: midi, maxi, sequin, color, skirt, cutout, tory 
-    ##       FREX: midi, color, sequin, maxi, skirt, cutout, tory 
-    ##       Lift: color, midi, sequin, maxi, skirt, cutout, tory 
-    ##       Score: midi, maxi, sequin, color, skirt, cutout, tory 
-    ## Topic 10 Top Words:
-    ##       Highest Prob: cargo, row, vest, jean, shirt, pant, bag 
-    ##       FREX: cargo, row, vest, jean, shirt, oversized, pant 
-    ##       Lift: cargo, row, vest, jean, shirt, pant, bag 
-    ##       Score: cargo, vest, row, jean, shirt, pant, bag
+residuals, we see the model suggests to select 20 topics. However, for
+some variation, I also tested using the next best result - 10.
 
 **Option 1 - Test 20 Topics:**
 
@@ -400,7 +331,7 @@ Topic proportions plot at 20 topics:
 
     plot(topics20)
 
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-22-1.png)
+![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-19-1.png)
 
 See what emerges from each topic by evaluating high prob & FREX words
 
@@ -508,6 +439,75 @@ See what emerges from each topic by evaluating high prob & FREX words
     ##       FREX: y2k, sequin, crochet, skirt, flare, dress, midi 
     ##       Lift: y2k, sequin, dress, flare, skirt, crochet, pant 
     ##       Score: y2k, sequin, dress, flare, skirt, pant, crochet
+
+**Option 1 - Test 10 Topics:**
+
+    topics10 <- stm(documents = fashionPrep$documents, 
+                 vocab = fashionPrep$vocab, seed = 1001,
+                 K = 10, verbose = FALSE)
+
+Topic proportions plot at 10 topics:
+
+    plot(topics10)
+
+![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-22-1.png)
+
+See what emerges from each topic by evaluating high prob & FREX words
+
+    top10_topic_list <- labelTopics(topics10)
+
+    print(top10_topic_list)
+
+    ## Topic 1 Top Words:
+    ##       Highest Prob: sheer, lace, pump, blue, y2k, prada, oversized 
+    ##       FREX: sheer, lace, pump, blue, y2k, prada, oversized 
+    ##       Lift: blue, lace, pump, sheer, y2k, prada, oversized 
+    ##       Score: sheer, blue, pump, y2k, lace, prada, oversized 
+    ## Topic 2 Top Words:
+    ##       Highest Prob: blaze, woolblend, cropped, flare, saint, oversized, pant 
+    ##       FREX: blaze, woolblend, cropped, flare, saint, oversized, jean 
+    ##       Lift: blaze, cropped, flare, saint, woolblend, oversized, pant 
+    ##       Score: blaze, woolblend, cropped, flare, saint, oversized, pant 
+    ## Topic 3 Top Words:
+    ##       Highest Prob: skirt, bottega, veneta, silk, mini, cutout, maxi 
+    ##       FREX: bottega, veneta, silk, skirt, mini, cutout, maxi 
+    ##       Lift: silk, bottega, veneta, mini, cutout, skirt, maxi 
+    ##       Score: skirt, veneta, bottega, mini, cutout, silk, maxi 
+    ## Topic 4 Top Words:
+    ##       Highest Prob: top, earring, ballet, satin, suit, will, color 
+    ##       FREX: earring, ballet, satin, suit, top, will, skirt 
+    ##       Lift: ballet, earring, satin, suit, will, top, color 
+    ##       Score: top, earring, will, suit, satin, ballet, color 
+    ## Topic 5 Top Words:
+    ##       Highest Prob: getty, image, photo, cotton, crochet, dry, noten 
+    ##       FREX: getty, image, photo, cotton, crochet, dry, noten 
+    ##       Lift: cotton, crochet, dry, getty, image, noten, photo 
+    ##       Score: getty, image, photo, dry, noten, van, cotton 
+    ## Topic 6 Top Words:
+    ##       Highest Prob: dress, denim, rise, tail, cutout, maxi, midi 
+    ##       FREX: dress, denim, rise, tail, cutout, maxi, skirt 
+    ##       Lift: denim, dress, rise, tail, cutout, maxi, mini 
+    ##       Score: dress, denim, rise, tail, cutout, maxi, midi 
+    ## Topic 7 Top Words:
+    ##       Highest Prob: leather, jacket, tailor, check, pink, wool, tory 
+    ##       FREX: leather, jacket, tailor, check, pink, wool, tory 
+    ##       Lift: check, jacket, leather, pink, tailor, wool, tory 
+    ##       Score: jacket, leather, tailor, wool, check, pink, tory 
+    ## Topic 8 Top Words:
+    ##       Highest Prob: shirt, jean, bag, pant, proenza, schouler, mule 
+    ##       FREX: bag, shirt, proenza, schouler, pant, jean, mule 
+    ##       Lift: mule, proenza, schouler, bag, pant, shirt, jean 
+    ##       Score: jean, shirt, pant, proenza, schouler, bag, mule 
+    ## Topic 9 Top Words:
+    ##       Highest Prob: midi, maxi, sequin, color, skirt, cutout, tory 
+    ##       FREX: midi, color, sequin, maxi, skirt, cutout, tory 
+    ##       Lift: color, midi, sequin, maxi, skirt, cutout, tory 
+    ##       Score: midi, maxi, sequin, color, skirt, cutout, tory 
+    ## Topic 10 Top Words:
+    ##       Highest Prob: cargo, row, vest, jean, shirt, pant, bag 
+    ##       FREX: cargo, row, vest, jean, shirt, oversized, pant 
+    ##       Lift: cargo, row, vest, jean, shirt, pant, bag 
+    ##       Score: cargo, vest, row, jean, shirt, pant, bag
 
 **Option 2 - Test 4 Topics:**
 
