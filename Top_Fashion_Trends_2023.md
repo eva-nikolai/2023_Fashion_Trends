@@ -308,9 +308,207 @@ for the 2023 fashion year.
                  vocab = fashionPrep$vocab, 
                  K = c(3, 4, 5, 10, 20), verbose = FALSE)
 
-    plot(kTest)
+    print(plot(kTest))
 
 ![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+
+    ## $xlog
+    ## [1] FALSE
+    ## 
+    ## $ylog
+    ## [1] FALSE
+    ## 
+    ## $adj
+    ## [1] 0.5
+    ## 
+    ## $ann
+    ## [1] TRUE
+    ## 
+    ## $ask
+    ## [1] FALSE
+    ## 
+    ## $bg
+    ## [1] "white"
+    ## 
+    ## $bty
+    ## [1] "o"
+    ## 
+    ## $cex
+    ## [1] 0.83
+    ## 
+    ## $cex.axis
+    ## [1] 1
+    ## 
+    ## $cex.lab
+    ## [1] 1
+    ## 
+    ## $cex.main
+    ## [1] 1.2
+    ## 
+    ## $cex.sub
+    ## [1] 1
+    ## 
+    ## $col
+    ## [1] "black"
+    ## 
+    ## $col.axis
+    ## [1] "black"
+    ## 
+    ## $col.lab
+    ## [1] "black"
+    ## 
+    ## $col.main
+    ## [1] "black"
+    ## 
+    ## $col.sub
+    ## [1] "black"
+    ## 
+    ## $crt
+    ## [1] 0
+    ## 
+    ## $err
+    ## [1] 0
+    ## 
+    ## $family
+    ## [1] ""
+    ## 
+    ## $fg
+    ## [1] "black"
+    ## 
+    ## $fig
+    ## [1] 0.5 1.0 0.0 0.5
+    ## 
+    ## $fin
+    ## [1] 6.199999 4.199999
+    ## 
+    ## $font
+    ## [1] 1
+    ## 
+    ## $font.axis
+    ## [1] 1
+    ## 
+    ## $font.lab
+    ## [1] 1
+    ## 
+    ## $font.main
+    ## [1] 2
+    ## 
+    ## $font.sub
+    ## [1] 1
+    ## 
+    ## $lab
+    ## [1] 5 5 7
+    ## 
+    ## $las
+    ## [1] 0
+    ## 
+    ## $lend
+    ## [1] "round"
+    ## 
+    ## $lheight
+    ## [1] 1
+    ## 
+    ## $ljoin
+    ## [1] "round"
+    ## 
+    ## $lmitre
+    ## [1] 10
+    ## 
+    ## $lty
+    ## [1] "solid"
+    ## 
+    ## $lwd
+    ## [1] 1
+    ## 
+    ## $mai
+    ## [1] 0.8 0.8 0.8 0.8
+    ## 
+    ## $mar
+    ## [1] 5.1 4.1 4.1 2.1
+    ## 
+    ## $mex
+    ## [1] 1
+    ## 
+    ## $mfcol
+    ## [1] 1 1
+    ## 
+    ## $mfg
+    ## [1] 1 1 1 1
+    ## 
+    ## $mfrow
+    ## [1] 1 1
+    ## 
+    ## $mgp
+    ## [1] 3 1 0
+    ## 
+    ## $mkh
+    ## [1] 0.001
+    ## 
+    ## $new
+    ## [1] TRUE
+    ## 
+    ## $oma
+    ## [1] 2 2 2 2
+    ## 
+    ## $omd
+    ## [1] 0 1 0 1
+    ## 
+    ## $omi
+    ## [1] 0 0 0 0
+    ## 
+    ## $pch
+    ## [1] 1
+    ## 
+    ## $pin
+    ## [1] 5.759999 3.159999
+    ## 
+    ## $plt
+    ## [1] 0.08857144 0.91142856 0.18400004 0.81599996
+    ## 
+    ## $ps
+    ## [1] 12
+    ## 
+    ## $pty
+    ## [1] "m"
+    ## 
+    ## $smo
+    ## [1] 1
+    ## 
+    ## $srt
+    ## [1] 0
+    ## 
+    ## $tck
+    ## [1] NA
+    ## 
+    ## $tcl
+    ## [1] -0.5
+    ## 
+    ## $usr
+    ## [1]     2.320    20.680 -1387.849 -1276.748
+    ## 
+    ## $xaxp
+    ## [1] 0 1 5
+    ## 
+    ## $xaxs
+    ## [1] "r"
+    ## 
+    ## $xaxt
+    ## [1] "s"
+    ## 
+    ## $xpd
+    ## [1] FALSE
+    ## 
+    ## $yaxp
+    ## [1] 0 1 5
+    ## 
+    ## $yaxs
+    ## [1] "r"
+    ## 
+    ## $yaxt
+    ## [1] "s"
+    ## 
+    ## $ylbias
+    ## [1] 0.2
 
 After viewing the results of the kTest, the results are fairly
 interesting. Specifically, it is interesting to see the semantic
