@@ -236,6 +236,8 @@ Ideally, these results will be able to identify the most popular trends for the 
 
 **Perform kTest to choose topic count**
 ```{r}
+set.seed(1001)
+
 kTest <- searchK(documents = fashionPrep$documents, 
              vocab = fashionPrep$vocab, 
              K = c(3, 4, 5, 10, 20), verbose = FALSE)

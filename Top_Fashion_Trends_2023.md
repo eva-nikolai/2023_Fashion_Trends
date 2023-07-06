@@ -304,6 +304,8 @@ for the 2023 fashion year.
 
 **Perform kTest to choose topic count**
 
+    set.seed(1001)
+
     kTest <- searchK(documents = fashionPrep$documents, 
                  vocab = fashionPrep$vocab, 
                  K = c(3, 4, 5, 10, 20), verbose = FALSE)
