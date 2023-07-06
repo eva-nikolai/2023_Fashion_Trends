@@ -2,7 +2,8 @@
 title: "Top_2023_Fashion_Trends"
 author: "Eva Nikolai"
 date: "2023-03-03"
-output: .md
+output: md_document
+
 ---
 
 ```{r setup, include=FALSE}
