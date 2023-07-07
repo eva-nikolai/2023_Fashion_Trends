@@ -303,7 +303,7 @@ article:
 
     library(RColorBrewer)
 
-    wordcloud(names(top_30_words), top_30_words, colors = brewer.pal(8, "Dark2"), scale = c(3, 0.5))
+    wordcloud(names(top_30_words), top_30_words, colors = brewer.pal(8, "Dark2"))
 
 ![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
 
