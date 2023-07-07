@@ -228,6 +228,12 @@ head(sort(term_frequency, decreasing = TRUE),20)
 library(wordcloud)
 
 wordcloud(names(term_frequency), term_frequency)
+
+library(RColorBrewer)
+
+# Create the word cloud with a sophisticated color palette
+wordcloud(names(term_frequency), term_frequency, colors = brewer.pal(8, "Dark2"))
+
 ```
 
 From conducting the term frequency, we see that skirts, dresses, leather, denim, and sheer are the most used terms. This indicates that all 10 fashion articles believe these clothing articles/ styles will be particularly relevant in 2023 trends.
