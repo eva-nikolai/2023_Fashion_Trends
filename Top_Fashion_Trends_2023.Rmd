@@ -224,6 +224,10 @@ Out of curiosity, let's see what the most frequent terms are in each article:
 term_frequency <- tm::termFreq(articles_lemmatized)
 
 head(sort(term_frequency, decreasing = TRUE),20)
+
+library(wordcloud)
+
+wordcloud(names(term_frequency), term_frequency)
 ```
 
 From conducting the term frequency, we see that skirts, dresses, leather, denim, and sheer are the most used terms. This indicates that all 10 fashion articles believe these clothing articles/ styles will be particularly relevant in 2023 trends.

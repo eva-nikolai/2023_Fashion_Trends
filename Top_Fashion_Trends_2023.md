@@ -289,6 +289,16 @@ article:
     ##    jean   photo   sheer     top     bag  cotton    maxi    pant  tailor bottega 
     ##      10      10      10      10       7       7       7       7       7       6
 
+    library(wordcloud)
+
+    ## Warning: package 'wordcloud' was built under R version 4.2.3
+
+    ## Loading required package: RColorBrewer
+
+    wordcloud(names(term_frequency), term_frequency)
+
+![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
+
 From conducting the term frequency, we see that skirts, dresses,
 leather, denim, and sheer are the most used terms. This indicates that
 all 10 fashion articles believe these clothing articles/ styles will be
