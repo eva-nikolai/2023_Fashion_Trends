@@ -282,14 +282,18 @@ article:
 
     term_frequency <- tm::termFreq(articles_lemmatized)
 
-    top_20_words <- head(sort(term_frequency, decreasing = TRUE), 20)
+    top_30_words <- head(sort(term_frequency, decreasing = TRUE), 30)
 
-    top_20_words
+    top_30_words
 
-    ##   skirt   dress leather    midi  jacket   shirt   blaze   denim   getty   image 
-    ##      26      16      15      13      12      12      10      10      10      10 
-    ##    jean   photo   sheer     top     bag  cotton    maxi    pant  tailor bottega 
-    ##      10      10      10      10       7       7       7       7       7       6
+    ##     skirt     dress   leather      midi    jacket     shirt     blaze     denim 
+    ##        26        16        15        13        12        12        10        10 
+    ##     getty     image      jean     photo     sheer       top       bag    cotton 
+    ##        10        10        10        10        10        10         7         7 
+    ##      maxi      pant    tailor   bottega    veneta woolblend     cargo   earring 
+    ##         7         7         7         6         6         6         5         5 
+    ##      lace   proenza      pump  schouler    sequin    ballet 
+    ##         5         5         5         5         5         4
 
     library(wordcloud)
 
@@ -299,21 +303,9 @@ article:
 
     library(RColorBrewer)
 
-    wordcloud(names(top_20_words), top_20_words, colors = rainbow(length(top_20_words)))
+    wordcloud(names(top_30_words), top_30_words, colors = brewer.pal(8, "Dark2"))
 
 ![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
-
-    library(viridis)
-
-    ## Loading required package: viridisLite
-
-    # Select the top 20 words
-    top_20_words <- head(sort(term_frequency, decreasing = TRUE), 20)
-
-    # Create the word cloud with pretty colors
-    wordcloud(names(top_20_words), top_20_words, colors = viridis(20))
-
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-2.png)
 
 From conducting the term frequency, we see that skirts, dresses,
 leather, denim, and sheer are the most used terms. This indicates that
