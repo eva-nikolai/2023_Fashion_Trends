@@ -299,7 +299,7 @@ article:
 
     library(RColorBrewer)
 
-    wordcloud(names(top_20_words), top_20_words, colors = brewer.pal(5, "Dark2"))
+    wordcloud(names(top_20_words), top_20_words, colors = rainbow(length(top_20_words)))
 
 ![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
 
