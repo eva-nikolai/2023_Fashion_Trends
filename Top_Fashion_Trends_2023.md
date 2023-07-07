@@ -282,7 +282,9 @@ article:
 
     term_frequency <- tm::termFreq(articles_lemmatized)
 
-    head(sort(term_frequency, decreasing = TRUE),20)
+    top_20_words <- head(sort(term_frequency, decreasing = TRUE), 20)
+
+    top_20_words
 
     ##   skirt   dress leather    midi  jacket   shirt   blaze   denim   getty   image 
     ##      26      16      15      13      12      12      10      10      10      10 
@@ -295,23 +297,11 @@ article:
 
     ## Loading required package: RColorBrewer
 
-    wordcloud(names(term_frequency), term_frequency)
-
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
-
     library(RColorBrewer)
 
-    # Create the word cloud with a sophisticated color palette
-    wordcloud(names(term_frequency), term_frequency, colors = brewer.pal(8, "Dark2"))
+    wordcloud(names(top_20_words), top_20_words, colors = brewer.pal(5, "Dark2"))
 
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-2.png)
-
-    top_20_words <- head(sort(term_frequency, decreasing = TRUE), 20)
-
-    # Create the word cloud with the top 20 words
-    wordcloud(names(top_20_words), top_20_words, colors = brewer.pal(8, "Dark2"))
-
-![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-3.png)
+![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-1.png)
 
 From conducting the term frequency, we see that skirts, dresses,
 leather, denim, and sheer are the most used terms. This indicates that
