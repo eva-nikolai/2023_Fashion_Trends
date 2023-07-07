@@ -306,6 +306,13 @@ article:
 
 ![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-2.png)
 
+    top_20_words <- head(sort(term_frequency, decreasing = TRUE), 20)
+
+    # Create the word cloud with the top 20 words
+    wordcloud(names(top_20_words), top_20_words, colors = brewer.pal(8, "Dark2"))
+
+![](Top_Fashion_Trends_2023_files/figure-markdown_strict/unnamed-chunk-16-3.png)
+
 From conducting the term frequency, we see that skirts, dresses,
 leather, denim, and sheer are the most used terms. This indicates that
 all 10 fashion articles believe these clothing articles/ styles will be
